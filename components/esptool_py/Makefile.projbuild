@@ -15,7 +15,7 @@ PYTHON ?= $(call dequote,$(CONFIG_SDK_PYTHON))
 #
 ESPTOOLPY_SRC := $(COMPONENT_PATH)/esptool/esptool.py
 ESPTOOLPY := $(PYTHON) $(ESPTOOLPY_SRC) --chip esp32
-ESPTOOLPY_SERIAL := $(ESPTOOLPY) --port '$(ESPPORT)' --baud $(ESPBAUD) --before $(CONFIG_ESPTOOLPY_BEFORE) --after $(CONFIG_ESPTOOLPY_AFTER)
+ESPTOOLPY_SERIAL := $(ESPTOOLPY) --port "$(ESPPORT)" --baud $(ESPBAUD) --before $(CONFIG_ESPTOOLPY_BEFORE) --after $(CONFIG_ESPTOOLPY_AFTER)
 
 # Supporting esptool command line tools
 ESPEFUSEPY := $(PYTHON) $(COMPONENT_PATH)/esptool/espefuse.py
